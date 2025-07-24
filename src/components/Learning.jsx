@@ -5,68 +5,39 @@ const Learning = () => {
   const [selectedPlatform, setSelectedPlatform] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const platforms = [
-    {
-      name: 'Khan Academy Kids',
-      description: 'Fun learning games for reading, math, and more!',
-      emoji: '🎓',
-      color: 'bg-blue-500',
-      category: 'educational',
-      embedUrl: 'https://www.khanacademy.org/kids',
-      apiEndpoint: 'https://www.khanacademy.org/api/internal/user/profile',
-      subjects: ['Math', 'Reading', 'Logic']
-    },
-    {
-      name: 'Quizizz',
-      description: 'Interactive quizzes that make learning fun!',
-      emoji: '🧩',
-      color: 'bg-purple-500',
-      category: 'quiz',
-      embedUrl: 'https://quizizz.com/embed/quiz/5f8c4c4c4c4c4c4c4c4c4c4c',
-      apiEndpoint: 'https://quizizz.com/api/main/game',
-      subjects: ['All Subjects', 'Games', 'Quizzes']
-    },
-    {
-      name: 'Scratch Jr',
-      description: 'Learn coding with colorful blocks!',
-      emoji: '💻',
-      color: 'bg-orange-500',
-      category: 'coding',
-      embedUrl: 'https://scratch.mit.edu/projects/editor/?tutorial=getStarted',
-      apiEndpoint: 'https://api.scratch.mit.edu/projects',
-      subjects: ['Coding', 'Logic', 'Creativity']
-    },
-    {
-      name: 'Duolingo Kids',
-      description: 'Learn new languages with cute characters!',
-      emoji: '🦉',
-      color: 'bg-green-500',
-      category: 'language',
-      embedUrl: 'https://www.duolingo.com/learn',
-      apiEndpoint: 'https://www.duolingo.com/api/1/users/show',
-      subjects: ['Languages', 'Vocabulary']
-    },
-    {
-      name: 'Prodigy Math',
-      description: 'Math adventures in a magical world!',
-      emoji: '🏰',
-      color: 'bg-red-500',
-      category: 'educational',
-      embedUrl: 'https://play.prodigygame.com',
-      apiEndpoint: 'https://api.prodigygame.com/game-api/v3/curriculum',
-      subjects: ['Math', 'Problem Solving']
-    },
-    {
-      name: 'Toca Boca',
-      description: 'Creative play and exploration games!',
-      emoji: '🎨',
-      color: 'bg-pink-500',
-      category: 'creative',
-      embedUrl: 'https://tocaboca.com/games',
-      apiEndpoint: null,
-      subjects: ['Creativity', 'Imagination']
-    }
-  ];
+ const platforms = [
+  {
+    name: 'Quizizz',
+    description: 'Join interactive quizzes',
+    emoji: '🧩',
+    color: 'bg-purple-500',
+    category: 'quiz',
+    embedUrl: 'https://quizizz.com',
+    apiEndpoint: null,
+    subjects: ['All Subjects', 'Games']
+  },
+  {
+    name: 'Scratch',
+    description: 'Learn coding with colorful blocks!',
+    emoji: '💻',
+    color: 'bg-orange-500',
+    category: 'coding',
+    embedUrl: 'https://scratch.mit.edu/projects/10128407/embed',
+    apiEndpoint: 'https://api.scratch.mit.edu/projects',
+    subjects: ['Coding', 'Logic', 'Creativity']
+  },
+  {
+    name: 'Toca Boca',
+    description: 'Creative play and exploration games!',
+    emoji: '🎨',
+    color: 'bg-pink-500',
+    category: 'creative',
+    embedUrl: 'https://tocaboca.com',
+    apiEndpoint: null,
+    subjects: ['Creativity', 'Imagination']
+  }
+];
+
 
   const localActivities = [
     {
@@ -101,11 +72,9 @@ const Learning = () => {
 
   const categories = [
     { id: 'all', name: 'All Activities', emoji: '🌈' },
-    { id: 'educational', name: 'Educational', emoji: '📚' },
     { id: 'quiz', name: 'Quizzes', emoji: '❓' },
     { id: 'creative', name: 'Creative', emoji: '🎨' },
     { id: 'coding', name: 'Coding', emoji: '💻' },
-    { id: 'language', name: 'Languages', emoji: '🗣️' }
   ];
 
   const filteredPlatforms = selectedCategory === 'all' 
@@ -138,7 +107,7 @@ const Learning = () => {
     <div className="p-4 lg:p-8 space-y-6 lg:space-y-8">
       {/* Embedded Platform Modal */}
       {selectedPlatform && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-2 lg:p-4">
+        <div className="fixed inset-0 lg:ml-64 bg-black/80 flex items-center justify-center z-50 p-2 lg:p-4">
           <div className="bg-white rounded-2xl lg:rounded-3xl w-full h-full max-w-7xl max-h-[95vh] lg:max-h-[90vh] flex flex-col shadow-2xl border-2 lg:border-4 border-red-300">
             {/* Modal Header */}
             <div className="bg-gradient-to-r from-red-500 to-pink-500 rounded-t-xl lg:rounded-t-2xl p-4 lg:p-6 text-white flex items-center justify-between">

@@ -161,32 +161,6 @@ const Fees = () => {
           <p className="text-3xl lg:text-4xl font-bold text-orange-600 animate-pulse">$200</p>
         </div>
       </div>
-
-      {/* Payment Methods */}
-      <div className="bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-8 shadow-xl border-2 lg:border-4 border-green-200">
-        <h2 className="text-2xl lg:text-3xl font-bold text-green-600 mb-4 lg:mb-6 flex items-center gap-3 justify-center lg:justify-start">
-          <span className="text-3xl lg:text-4xl animate-spin" style={{ animationDuration: '2s' }}>💳</span>
-          Easy Payment Options
-        </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6">
-          <div className="bg-blue-50 border-2 lg:border-3 border-blue-200 rounded-xl lg:rounded-2xl p-4 lg:p-6 text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-4xl lg:text-5xl animate-bounce mb-2 lg:mb-3">💳</div>
-            <h3 className="text-sm lg:text-lg font-bold text-blue-600">Credit Card</h3>
-          </div>
-          <div className="bg-green-50 border-2 lg:border-3 border-green-200 rounded-xl lg:rounded-2xl p-4 lg:p-6 text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-4xl lg:text-5xl animate-bounce mb-2 lg:mb-3">🏦</div>
-            <h3 className="text-sm lg:text-lg font-bold text-green-600">Bank Transfer</h3>
-          </div>
-          <div className="bg-purple-50 border-2 lg:border-3 border-purple-200 rounded-xl lg:rounded-2xl p-4 lg:p-6 text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-4xl lg:text-5xl animate-bounce mb-2 lg:mb-3">📱</div>
-            <h3 className="text-sm lg:text-lg font-bold text-purple-600">Mobile Pay</h3>
-          </div>
-          <div className="bg-yellow-50 border-2 lg:border-3 border-yellow-200 rounded-xl lg:rounded-2xl p-4 lg:p-6 text-center hover:shadow-lg transition-all duration-300">
-            <div className="text-4xl lg:text-5xl animate-bounce mb-2 lg:mb-3">💰</div>
-            <h3 className="text-sm lg:text-lg font-bold text-yellow-600">Cash</h3>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
