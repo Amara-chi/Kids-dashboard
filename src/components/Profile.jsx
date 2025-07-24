@@ -31,10 +31,20 @@ const Profile = () => {
     { name: 'Games', emoji: '🎮', selected: false }
   ];
 
+  const gradientMap = {
+  pink: 'from-pink-500 to-red-600',
+  blue: 'from-blue-500 to-red-600',
+  purple: 'from-purple-500 to-red-600',
+  green: 'from-green-500 to-red-600',
+  yellow: 'from-yellow-500 to-red-600',
+  red: 'from-red-500 to-red-600',
+};
+
+
   return (
     <div className="p-4 lg:p-8 space-y-6 lg:space-y-8">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl lg:rounded-3xl p-6 lg:p-8 text-white shadow-xl">
+      <div className={`bg-gradient-to-r ${gradientMap[favoriteColor] || 'from-purple-500 to-pink-500'} rounded-2xl lg:rounded-3xl p-6 lg:p-8 text-white shadow-xl`}>
         <h1 className="text-3xl lg:text-5xl font-bold mb-2 lg:mb-3 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 text-center lg:text-left">
           <span className="text-5xl lg:text-6xl animate-bounce">{selectedAvatar}</span>
           {childName}'s Profile
